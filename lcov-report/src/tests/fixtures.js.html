@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/tests/fixtures.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">src/tests</a> fixtures.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>6/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>6/6</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// @flow
+// flowlint untyped-import:off
+&nbsp;
+export const microsoftWord = {
+  "word2010-chrome62-win81": require("../../pasting/word2010-chrome62-win81.json"),
+  "word2010-firefox57-win81": require("../../pasting/word2010-firefox57-win81.json"),
+  "word2010-ie11-noequation-strippastedstyles-win81": require("../../pasting/word2010-ie11-noequation-strippastedstyles-win81.json"),
+  "word2010-ie11-noequation-win81": require("../../pasting/word2010-ie11-noequation-win81.json"),
+  "word-safari-ios11": require("../../pasting/word-safari-ios11.json"),
+  //   "word2016-chrome63-macos1013": require("../../pasting/word2016-chrome63-macos1013.json"),
+  //   "word2016-word2010doc-chrome63-win": require("../../pasting/word2016-word2010doc-chrome63-win.json"),
+  //   "word2016-word2010doc-edge16-win": require("../../pasting/word2016-word2010doc-edge16-win.json"),
+  //   "word2016-word2010doc-firefox57-win": require("../../pasting/word2016-word2010doc-firefox57-win.json"),
+  //   "word2016-word2010doc-ie11-win": require("../../pasting/word2016-word2010doc-ie11-win.json"),
+  //   "word2016-word2016macosdoc-chrome63-win": require("../../pasting/word2016-word2016macosdoc-chrome63-win.json"),
+  //   "word2016-word2016macosdoc-edge16-win": require("../../pasting/word2016-word2016macosdoc-edge16-win.json"),
+  //   "word2016-word2016macosdoc-firefox57-macos1013": require("../../pasting/word2016-word2016macosdoc-firefox57-macos1013.json"),
+  //   "word2016-word2016macosdoc-firefox57-win": require("../../pasting/word2016-word2016macosdoc-firefox57-win.json"),
+  //   "word2016-word2016macosdoc-ie11-win": require("../../pasting/word2016-word2016macosdoc-ie11-win.json"),
+  //   "word2016-word2016macosdoc-safari11-macos1013": require("../../pasting/word2016-word2016macosdoc-safari11-macos1013.json"),
+}
+&nbsp;
+export const googleDocs = {
+  "googledocs-chrome62-macos1013": require("../../pasting/googledocs-chrome62-macos1013.json"),
+  "googledocs-chrome62-win81": require("../../pasting/googledocs-chrome62-win81.json"),
+  "googledocs-edge16-win10": require("../../pasting/googledocs-edge16-win10.json"),
+  "googledocs-firefox57-macos1013": require("../../pasting/googledocs-firefox57-macos1013.json"),
+  "googledocs-firefox57-win81": require("../../pasting/googledocs-firefox57-win81.json"),
+  "googledocs-ie11-strippastedstyles-win81": require("../../pasting/googledocs-ie11-strippastedstyles-win81.json"),
+  "googledocs-ie11-win81": require("../../pasting/googledocs-ie11-win81.json"),
+  "googledocs-safari-ios11": require("../../pasting/googledocs-safari-ios11.json"),
+  "googledocs-safari11-macos1013": require("../../pasting/googledocs-safari11-macos1013.json"),
+}
+&nbsp;
+export const dropboxPaper = {
+  "dropboxpaper-chrome62-macos1013": require("../../pasting/dropboxpaper-chrome62-macos1013.json"),
+  "dropboxpaper-chrome62-win81": require("../../pasting/dropboxpaper-chrome62-win81.json"),
+  "dropboxpaper-edge16-win10": require("../../pasting/dropboxpaper-edge16-win10.json"),
+  "dropboxpaper-firefox57-macos1013": require("../../pasting/dropboxpaper-firefox57-macos1013.json"),
+  "dropboxpaper-firefox57-win81": require("../../pasting/dropboxpaper-firefox57-win81.json"),
+  "dropboxpaper-ie11-unsupported-strippastedstyles-win81": require("../../pasting/dropboxpaper-ie11-unsupported-strippastedstyles-win81.json"),
+  "dropboxpaper-ie11-unsupported-win81": require("../../pasting/dropboxpaper-ie11-unsupported-win81.json"),
+  "dropboxpaper-safari-ios11": require("../../pasting/dropboxpaper-safari-ios11.json"),
+  "dropboxpaper-safari11-macos1013": require("../../pasting/dropboxpaper-safari11-macos1013.json"),
+}
+&nbsp;
+export const applePages = {
+  "applepages-chrome62-macos1013": require("../../pasting/applepages-chrome62-macos1013.json"),
+  "applepages-firefox57-macos1013": require("../../pasting/applepages-firefox57-macos1013.json"),
+  "applepages-safari-ios11": require("../../pasting/applepages-safari-ios11.json"),
+  "applepages-safari11-macos1013": require("../../pasting/applepages-safari11-macos1013.json"),
+}
+&nbsp;
+export const wordOnline = {
+  "wordonline-chrome62-macos1013": require("../../pasting/wordonline-chrome62-macos1013.json"),
+  "wordonline-chrome62-win81": require("../../pasting/wordonline-chrome62-win81.json"),
+  "wordonline-edge16-win10": require("../../pasting/wordonline-edge16-win10.json"),
+  "wordonline-firefox57-macos1013": require("../../pasting/wordonline-firefox57-macos1013.json"),
+  "wordonline-firefox57-win81": require("../../pasting/wordonline-firefox57-win81.json"),
+  "wordonline-safari11-macos1013": require("../../pasting/wordonline-safari11-macos1013.json"),
+}
+&nbsp;
+export const draftjs = {
+  "draftjs-chrome64-macos1013": require("../../pasting/draftjs-chrome64-macos1013.json"),
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Sep 28 2018 21:40:02 GMT+0000 (Coordinated Universal Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

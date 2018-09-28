@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/lib/filters/entities.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/lib/filters</a> entities.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>80/80</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>34/34</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>20/20</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>77/77</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">77x</span>
+<span class="cline-any cline-yes">77x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">77x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">77x</span>
+<span class="cline-any cline-yes">4727x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4727x</span>
+<span class="cline-any cline-yes">278x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">267x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4716x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">77x</span>
+<span class="cline-any cline-yes">5127x</span>
+<span class="cline-any cline-yes">5127x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5127x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">43x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5127x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5127x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">77x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">77x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">77x</span>
+<span class="cline-any cline-yes">5150x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5150x</span>
+<span class="cline-any cline-yes">99219x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">99219x</span>
+<span class="cline-any cline-yes">6057x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6057x</span>
+<span class="cline-any cline-yes">224x</span>
+<span class="cline-any cline-yes">224x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">98995x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5150x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">77x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6247x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5907x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6239x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6054x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6054x</span>
+<span class="cline-any cline-yes">6011x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6011x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6007x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6054x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">79x</span>
+<span class="cline-any cline-yes">79x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">79x</span>
+<span class="cline-any cline-yes">5128x</span>
+<span class="cline-any cline-yes">4726x</span>
+<span class="cline-any cline-yes">4726x</span>
+<span class="cline-any cline-yes">278x</span>
+<span class="cline-any cline-yes">278x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">79x</span>
+<span class="cline-any cline-yes">270x</span>
+<span class="cline-any cline-yes">270x</span>
+<span class="cline-any cline-yes">322x</span>
+<span class="cline-any cline-yes">270x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">270x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">268x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">269x</span>
+<span class="cline-any cline-yes">264x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">269x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">268x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">79x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// @flow
+import { CharacterMetadata, ContentState } from "draft-js"
+import { ATOMIC, IMAGE } from "../constants"
+&nbsp;
+import type { BlockNode } from "draft-js/lib/BlockNode.js.flow"
+&nbsp;
+/**
+ * Clones entities in the entityMap, so each range points to its own entity instance.
+ * This only clones entities as necessary – if an entity is only referenced
+ * in a single range, it won't be changed.
+ */
+export const cloneEntities = (content: ContentState) =&gt; {
+  let newContent = content
+  const blockMap = newContent.getBlockMap()
+&nbsp;
+  const encounteredEntities = []
+&nbsp;
+  // Marks ranges that need cloning, because their entity has been encountered previously.
+  const shouldCloneEntity = (firstChar) =&gt; {
+    const key = firstChar.getEntity()
+&nbsp;
+    if (key) {
+      if (encounteredEntities.includes(key)) {
+        return true
+      }
+&nbsp;
+      encounteredEntities.push(key)
+    }
+&nbsp;
+    return false
+  }
+&nbsp;
+  // We're going to update blocks that contain ranges pointing at the same entity as other ranges.
+  const blocks = blockMap.map((block) =&gt; {
+    let newChars = block.getCharacterList()
+    let altered = false
+&nbsp;
+    // Updates ranges for which the entity needs to be cloned.
+    const updateRangeWithClone = (start, end) =&gt; {
+      const key = newChars.get(start).getEntity()
+      const entity = newContent.getEntity(key)
+&nbsp;
+      newContent = newContent.createEntity(
+        entity.getType(),
+        entity.getMutability(),
+        entity.getData(),
+      )
+      const newKey = newContent.getLastCreatedEntityKey()
+&nbsp;
+      // Update all of the chars in the range with the new entity.
+      newChars = newChars.map((char, i) =&gt; {
+        if (start &lt;= i &amp;&amp; i &lt;= end) {
+          return CharacterMetadata.applyEntity(char, newKey)
+        }
+&nbsp;
+        return char
+      })
+&nbsp;
+      altered = true
+    }
+&nbsp;
+    block.findEntityRanges(shouldCloneEntity, updateRangeWithClone)
+&nbsp;
+    return altered ? block.set("characterList", newChars) : block
+  })
+&nbsp;
+  return newContent.merge({
+    blockMap: blockMap.merge(blocks),
+  })
+}
+&nbsp;
+/**
+ * Filters entity ranges (where entities are applied on text) based on the result of
+ * the callback function. Returning true keeps the entity range, false removes it.
+ * Draft.js automatically removes entities if they are not applied on any text.
+ */
+export const filterEntityRanges = (
+  filterFn: (
+    content: ContentState,
+    entityKey: string,
+    block: BlockNode,
+  ) =&gt; boolean,
+  content: ContentState,
+) =&gt; {
+  const blockMap = content.getBlockMap()
+&nbsp;
+  /**
+   * Removes entities from the character list if the entity isn't enabled.
+   * Also removes image entities placed outside of atomic blocks, which can happen
+   * on paste.
+   * A better approach would probably be to split the block where the image is and
+   * create an atomic block there, but that's another story. This is what Draft.js
+   * does when the copy-paste is all within one editor.
+   */
+  const blocks = blockMap.map((block) =&gt; {
+    let altered = false
+&nbsp;
+    const chars = block.getCharacterList().map((char) =&gt; {
+      const entityKey = char.getEntity()
+&nbsp;
+      if (entityKey) {
+        const shouldRemove = !filterFn(content, entityKey, block)
+&nbsp;
+        if (shouldRemove) {
+          altered = true
+          return CharacterMetadata.applyEntity(char, null)
+        }
+      }
+&nbsp;
+      return char
+    })
+&nbsp;
+    return altered ? block.set("characterList", chars) : block
+  })
+&nbsp;
+  return content.merge({
+    blockMap: blockMap.merge(blocks),
+  })
+}
+&nbsp;
+/**
+ * Keeps all entity types (images, links, documents, embeds) that are enabled.
+ */
+export const shouldKeepEntityType = (
+  whitelist: Array&lt;Object&gt;,
+  type: string,
+) =&gt; {
+  return whitelist.some((e) =&gt; e.type === type)
+}
+&nbsp;
+/**
+ * Removes invalid images – they should only be in atomic blocks.
+ * This only removes the image entity, not the camera emoji (📷) that Draft.js inserts.
+ */
+export const shouldRemoveImageEntity = (
+  entityType: string,
+  blockType: string,
+) =&gt; {
+  return entityType === IMAGE &amp;&amp; blockType !== ATOMIC
+}
+&nbsp;
+/**
+ * Filters entities based on the data they contain.
+ */
+export const shouldKeepEntityByAttribute = (
+  entityTypes: Array&lt;Object&gt;,
+  entityType: string,
+  data: Object,
+) =&gt; {
+  const config = entityTypes.find((t) =&gt; t.type === entityType)
+  // If no whitelist is defined, the filter keeps the entity.
+  const whitelist = config &amp;&amp; config.whitelist ? config.whitelist : {}
+&nbsp;
+  const isValid = Object.keys(whitelist).every((attr) =&gt; {
+    const check = whitelist[attr]
+&nbsp;
+    if (typeof check === "boolean") {
+      const hasData = data.hasOwnProperty(attr)
+&nbsp;
+      return check ? hasData : !hasData
+    }
+&nbsp;
+    return new RegExp(check).test(data[attr])
+  })
+&nbsp;
+  return isValid
+}
+&nbsp;
+/**
+ * Filters data on an entity to only retain what is whitelisted.
+ */
+export const filterEntityData = (
+  entityTypes: Array&lt;Object&gt;,
+  content: ContentState,
+) =&gt; {
+  let newContent = content
+  const entities = {}
+&nbsp;
+  newContent.getBlockMap().forEach((block) =&gt; {
+    block.findEntityRanges((char) =&gt; {
+      const entityKey = char.getEntity()
+      if (entityKey) {
+        const entity = newContent.getEntity(entityKey)
+        entities[entityKey] = entity
+      }
+    })
+  })
+&nbsp;
+  Object.keys(entities).forEach((key) =&gt; {
+    const entity = entities[key]
+    const data = entity.getData()
+    const config = entityTypes.find((t) =&gt; t.type === entity.getType())
+    const whitelist = config ? config.attributes : null
+&nbsp;
+    // If no whitelist is defined, keep all of the data.
+    if (!whitelist) {
+      return data
+    }
+&nbsp;
+    const newData = whitelist.reduce((attrs, attr) =&gt; {
+      // We do not want to include undefined values if there is no data.
+      if (data.hasOwnProperty(attr)) {
+        attrs[attr] = data[attr]
+      }
+&nbsp;
+      return attrs
+    }, {})
+&nbsp;
+    newContent = newContent.replaceEntityData(key, newData)
+  })
+&nbsp;
+  return newContent
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Sep 28 2018 21:40:02 GMT+0000 (Coordinated Universal Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

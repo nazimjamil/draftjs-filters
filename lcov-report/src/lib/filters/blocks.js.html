@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/lib/filters/blocks.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/lib/filters</a> blocks.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>44/44</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>19/19</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>12/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>44/44</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">77x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">77x</span>
+<span class="cline-any cline-yes">5156x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5156x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">77x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">77x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">73x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">77x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">77x</span>
+<span class="cline-any cline-yes">5173x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3838x</span>
+<span class="cline-any cline-yes">3838x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3838x</span>
+<span class="cline-any cline-yes">22337x</span>
+<span class="cline-any cline-yes">22337x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3838x</span>
+<span class="cline-any cline-yes">172x</span>
+<span class="cline-any cline-yes">172x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">172x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">161x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">161x</span>
+<span class="cline-any cline-yes">161x</span>
+<span class="cline-any cline-yes">161x</span>
+<span class="cline-any cline-yes">316x</span>
+<span class="cline-any cline-yes">316x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">161x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3827x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">77x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">77x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">77x</span>
+<span class="cline-any cline-yes">5150x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">77x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">77x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">77x</span>
+<span class="cline-any cline-yes">5151x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">147x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">77x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// @flow
+import { ContentState } from "draft-js"
+import { UNSTYLED, UNORDERED_LIST_ITEM, ORDERED_LIST_ITEM } from "../constants"
+&nbsp;
+/**
+ * Removes blocks that have a non-zero depth, and aren't list items.
+ * Happens with Apple Pages inserting `unstyled` items between list items.
+ */
+export const removeInvalidDepthBlocks = (content: ContentState) =&gt; {
+  const blockMap = content.getBlockMap()
+&nbsp;
+  const isValidDepthBlock = (block) =&gt; {
+    const isListBlock = [UNORDERED_LIST_ITEM, ORDERED_LIST_ITEM].includes(
+      block.getType(),
+    )
+&nbsp;
+    return isListBlock || block.getDepth() === 0
+  }
+&nbsp;
+  const filteredBlocks = blockMap.filter(isValidDepthBlock)
+&nbsp;
+  if (filteredBlocks.size !== blockMap.size) {
+    return content.merge({
+      blockMap: filteredBlocks,
+    })
+  }
+&nbsp;
+  return content
+}
+&nbsp;
+/**
+ * Changes block type and depth based on the block's text. – some word processors
+ * add a specific prefix within the text, eg. "· Bulleted list" in Word 2010.
+ * Also removes the matched text.
+ * This is meant first and foremost for list items where the list bullet or numeral
+ * ends up in the text. Other use cases may not be well covered.
+ */
+export const preserveBlockByText = (
+  rules: Array&lt;{
+    test: string,
+    type: string,
+    depth: number,
+  }&gt;,
+  content: ContentState,
+) =&gt; {
+  const blockMap = content.getBlockMap()
+&nbsp;
+  const blocks = blockMap
+    .filter((block) =&gt; block.getType() === "unstyled")
+    .map((block) =&gt; {
+      const text = block.getText()
+      let newBlock = block
+      let match
+&nbsp;
+      const matchingRule = rules.find((rule) =&gt; {
+        match = new RegExp(rule.test).exec(text)
+        return match !== null
+      })
+&nbsp;
+      if (matchingRule &amp;&amp; match &amp;&amp; match[0]) {
+        const text = block.getText()
+        const entity = block.getEntityAt(0)
+&nbsp;
+        // Special case – do not convert the block if there is an entity at the start, and the matching text is the full block’s text.
+        // This can happen in Word for equations, which are injected as images with text "📷 ".
+        if (entity &amp;&amp; match[0] === text) {
+          return newBlock
+        }
+&nbsp;
+        // Unicode gotcha:
+        // At the moment, Draft.js stores one CharacterMetadata in the character list
+        // for each "character" in an astral symbol. "📷" has a length of 2, is stored with two CharacterMetadata instances.
+        // What matters is that we remove the correct number of chars from both
+        // the text and the List&lt;CharacterMetadata&gt;. So – we want to use the ES5 way of counting
+        // a string length.
+        // See https://mathiasbynens.be/notes/javascript-unicode.
+        const sliceOffset = match[0].length
+&nbsp;
+        // Maintain persistence in the list while removing chars from the start.
+        // https://github.com/facebook/draft-js/blob/788595984da7c1e00d1071ea82b063ff87140be4/src/model/transaction/removeRangeFromContentState.js#L333
+        let chars = block.getCharacterList()
+        let startOffset = 0
+        while (startOffset &lt; sliceOffset) {
+          chars = chars.shift()
+          startOffset++
+        }
+&nbsp;
+        newBlock = newBlock.merge({
+          type: matchingRule.type,
+          depth: matchingRule.depth,
+          text: text.slice(sliceOffset),
+          characterList: chars,
+        })
+      }
+&nbsp;
+      return newBlock
+    })
+&nbsp;
+  return blocks.size === 0
+    ? content
+    : content.merge({
+        blockMap: blockMap.merge(blocks),
+      })
+}
+&nbsp;
+/**
+ * Resets the depth of all the content to at most max.
+ */
+export const limitBlockDepth = (max: number, content: ContentState) =&gt; {
+  const blockMap = content.getBlockMap()
+&nbsp;
+  const changedBlocks = blockMap
+    .filter((block) =&gt; block.getDepth() &gt; max)
+    .map((block) =&gt; block.set("depth", max))
+&nbsp;
+  return changedBlocks.size === 0
+    ? content
+    : content.merge({
+        blockMap: blockMap.merge(changedBlocks),
+      })
+}
+&nbsp;
+/**
+ * Converts all block types not present in the whitelist to unstyled.
+ * Also sets depth to 0 (for potentially nested list items).
+ */
+export const filterBlockTypes = (
+  whitelist: Array&lt;string&gt;,
+  content: ContentState,
+) =&gt; {
+  const blockMap = content.getBlockMap()
+&nbsp;
+  const changedBlocks = blockMap
+    .filter((block) =&gt; !whitelist.includes(block.getType()))
+    .map((block) =&gt;
+      block.merge({
+        type: UNSTYLED,
+        depth: 0,
+      }),
+    )
+&nbsp;
+  return changedBlocks.size === 0
+    ? content
+    : content.merge({
+        blockMap: blockMap.merge(changedBlocks),
+      })
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Sep 28 2018 21:40:02 GMT+0000 (Coordinated Universal Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

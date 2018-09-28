@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/lib/filters/editor.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/lib/filters</a> editor.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>14/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>5/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/3</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>14/14</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">75x</span>
+<span class="cline-any cline-yes">75x</span>
+<span class="cline-any cline-yes">6051x</span>
+<span class="cline-any cline-yes">6051x</span>
+<span class="cline-any cline-yes">6051x</span>
+<span class="cline-any cline-yes">6051x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6051x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">75x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">75x</span>
+<span class="cline-any cline-yes">75x</span>
+<span class="cline-any cline-yes">900x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">75x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// @flow
+import { EditorState } from "draft-js"
+&nbsp;
+import { ATOMIC, UNSTYLED } from "../constants"
+import {
+  preserveAtomicBlocks,
+  resetAtomicBlocks,
+  removeInvalidAtomicBlocks,
+} from "./atomic"
+import {
+  limitBlockDepth,
+  preserveBlockByText,
+  filterBlockTypes,
+  removeInvalidDepthBlocks,
+} from "./blocks"
+import { filterInlineStyles } from "./styles"
+import {
+  cloneEntities,
+  filterEntityData,
+  filterEntityRanges,
+  shouldKeepEntityType,
+  shouldRemoveImageEntity,
+  shouldKeepEntityByAttribute,
+} from "./entities"
+import { replaceTextBySpaces } from "./text"
+&nbsp;
+import type { EditorState as EditorStateType } from "draft-js"
+&nbsp;
+type FilterOptions = {
+  // Whitelist of allowed block types. unstyled and atomic are always included.
+  blocks: Array&lt;string&gt;,
+  // Whitelist of allowed inline styles.
+  styles: Array&lt;string&gt;,
+  // Whitelist of allowed entities.
+  entities: Array&lt;{
+    // Entity type, eg. "LINK"
+    type: string,
+    // Allowed attributes. Other attributes will be removed.
+    attributes: Array&lt;string&gt;,
+    // Refine which entities are kept by whitelisting acceptable values with regular expression patterns.
+    whitelist: {
+      [attribute: string]: string,
+    },
+  }&gt;,
+  // Maximum amount of depth for lists (0 = no nesting).
+  maxNesting: number,
+  // Characters to replace with whitespace.
+  whitespacedCharacters: Array&lt;string&gt;,
+}
+&nbsp;
+const PREFIX_RULES = [
+  {
+    // https://regexper.com/#%5E(%C2%B7%20%7C%E2%80%A2%5Ct%7C%E2%80%A2%7C%F0%9F%93%B7%20%7C%5Ct%7C%20%5Ct)
+    test: "^(· |•\t|•|📷 |\t| \t)",
+    type: "unordered-list-item",
+    depth: 0,
+  },
+  // https://regexper.com/#%5E(%E2%97%A6%7Co%20%7Co%5Ct)
+  { test: "^(◦|o |o\t)", type: "unordered-list-item", depth: 1 },
+  // https://regexper.com/#%5E(%C2%A7%20%7C%EF%82%A7%5Ct%7C%E2%97%BE)
+  { test: "^(§ |\t|◾)", type: "unordered-list-item", depth: 2 },
+  {
+    // https://regexper.com/#%5E1%7B0%2C1%7D%5Cd%5C.%5B%20%5Ct%5D
+    test: "^1{0,1}\\d\\.[ \t]",
+    type: "ordered-list-item",
+    depth: 0,
+  },
+  {
+    // Roman numerals from I to XX.
+    // https://regexper.com/#%5Ex%7B0%2C1%7D(i%7Cii%7Ciii%7Civ%7Cv%7Cvi%7Cvii%7Cviii%7Cix%7Cx)%5C.%5B%20%5Ct%5D
+    test: "^x{0,1}(i|ii|iii|iv|v|vi|vii|viii|ix|x)\\.[ \t]",
+    type: "ordered-list-item",
+    depth: 2,
+  },
+  {
+    // There is a clash between this and the i., v., x. roman numerals.
+    // Those tests are executed in order though, so the roman numerals take priority.
+    // We do not want to match too many letters (say aa.), because those could be actual text.
+    // https://regexper.com/#%5E%5Ba-z%5D%5C.%5B%20%5Ct%5D
+    test: "^[a-z]\\.[ \t]",
+    type: "ordered-list-item",
+    depth: 1,
+  },
+]
+&nbsp;
+/**
+ * Applies whitelist and blacklist operations to the editor content,
+ * to enforce it's shaped according to the options.
+ */
+export const filterEditorState = (
+  options: FilterOptions,
+  editorState: EditorStateType,
+) =&gt; {
+  const {
+    blocks,
+    styles,
+    entities,
+    maxNesting,
+    whitespacedCharacters,
+  } = options
+  const shouldKeepEntityRange = (content, entityKey, block) =&gt; {
+    const entity = content.getEntity(entityKey)
+    const entityData = entity.getData()
+    const entityType = entity.getType()
+    const blockType = block.getType()
+&nbsp;
+    return (
+      shouldKeepEntityType(entities, entityType) &amp;&amp;
+      shouldKeepEntityByAttribute(entities, entityType, entityData) &amp;&amp;
+      !shouldRemoveImageEntity(entityType, blockType)
+    )
+  }
+&nbsp;
+  // Order matters. Some filters may need the information filtered out by others.
+  const filters = [
+    // 1. clean up blocks.
+    removeInvalidDepthBlocks,
+    preserveBlockByText.bind(null, PREFIX_RULES),
+    limitBlockDepth.bind(null, maxNesting),
+    // 2. reset styles and blocks.
+    filterInlineStyles.bind(null, styles),
+    // Add block types that are always enabled in Draft.js.
+    filterBlockTypes.bind(null, blocks.concat([UNSTYLED, ATOMIC])),
+    // 4. Process atomic blocks before processing entities.
+    preserveAtomicBlocks,
+    resetAtomicBlocks,
+    // 5. Remove entity ranges (and linked entities)
+    filterEntityRanges.bind(null, shouldKeepEntityRange),
+    // 6. Remove/filter entity-related matters.
+    removeInvalidAtomicBlocks.bind(null, entities),
+    filterEntityData.bind(null, entities),
+    // 7. Clone entities for which it is necessary.
+    cloneEntities,
+    // 8. Finally, do text operations.
+    replaceTextBySpaces.bind(null, whitespacedCharacters),
+  ]
+&nbsp;
+  const content = editorState.getCurrentContent()
+  const nextContent = filters.reduce(
+    (c, filter: Function) =&gt; filter(c),
+    content,
+  )
+&nbsp;
+  return nextContent === content
+    ? editorState
+    : EditorState.set(editorState, {
+        currentContent: nextContent,
+      })
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Sep 28 2018 21:40:02 GMT+0000 (Coordinated Universal Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>
